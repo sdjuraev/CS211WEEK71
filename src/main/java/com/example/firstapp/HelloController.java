@@ -12,3 +12,4 @@ public class HelloController {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
 }
+// https://github.com/sdjuraev/CS211WEEK71.git
