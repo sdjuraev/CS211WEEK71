@@ -12,6 +12,6 @@
       <Button fx:id="LoginButton" layoutX="74.0" layoutY="282.0" mnemonicParsing="false" onAction="#setLoginButton" text="Login" />
       <Button layoutX="231.0" layoutY="282.0" mnemonicParsing="false" text="Signup" />
       <Button layoutX="155.0" layoutY="282.0" mnemonicParsing="false" text="Cancel" />
-
+      <CheckBox layoutX="70.0" layoutY="136.0" mnemonicParsing="false" text="Remember me" />
    </children>
 </Pane>
