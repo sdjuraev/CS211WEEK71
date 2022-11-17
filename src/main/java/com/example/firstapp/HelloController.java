@@ -2,7 +2,10 @@ package com.example.firstapp;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,6 +25,8 @@ public class HelloController {
 
     @FXML
     Button CancelButton;
+    @FXML
+    Button SignUp;
 
     @FXML
     protected void onHelloButtonClick() {
@@ -64,6 +69,17 @@ public class HelloController {
 
 
             }
+            @FXML
+    public void setSignUp() throws IOException {
+                Stage stage=new Stage();
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("signup-view.fxml"));
+                Scene scene = new Scene(fxmlLoader.load());
+                stage.setTitle("Sign UP PAGE!");
+                stage.setScene(scene);
+                stage.show();
+            }
+
+
 
 
 
