@@ -1,5 +1,6 @@
 package com.example.firstapp;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
@@ -18,6 +19,9 @@ public class HelloController {
     private PasswordField passwordText;
     int counter=5;
     boolean status=false;
+
+    @FXML
+    Button CancelButton;
 
     @FXML
     protected void onHelloButtonClick() {
@@ -44,7 +48,6 @@ public class HelloController {
                     counter = 5;
                     status = true;
                 } else {
-                    System.out.println("DIDNT MATCH!");
 
                 }
             }
@@ -54,6 +57,14 @@ public class HelloController {
             }
         }
     }
+    @FXML
+    public void setCancelButton()
+    {
+        Platform.exit();
+
+
+            }
+
 
 
 }
