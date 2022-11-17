@@ -44,6 +44,7 @@ public class HelloController {
                     counter = 5;
                     status = true;
                 } else {
+                    System.out.println("DIDNT MATCH!");
 
                 }
             }
