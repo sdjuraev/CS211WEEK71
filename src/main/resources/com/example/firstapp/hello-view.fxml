@@ -3,14 +3,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<Pane prefHeight="350" prefWidth="350" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.firstapp.HelloController">
+<Pane prefHeight="350" prefWidth="396.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.firstapp.HelloController">
    <children>
-       <Label layoutX="10"  layoutY="60" text="Login"></Label>
-       <Label layoutX="10" layoutY="100" text="Password"/>
-       <TextField fx:id="loginText" layoutX="70" layoutY="60"></TextField>
-       <PasswordField fx:id="passwordText" layoutX="70" layoutY="100"></PasswordField>
-      <Button fx:id="LoginButton" onAction="#setLoginButton" layoutX="74.0" layoutY="282.0" mnemonicParsing="false" text="Login" />
+       <Label layoutX="10" layoutY="60" text="Login" />
+       <Label layoutX="10" layoutY="100" text="Password" />
+       <TextField fx:id="loginText" layoutX="70" layoutY="60" />
+       <PasswordField fx:id="passwordText" layoutX="70" layoutY="100" />
+      <Button fx:id="LoginButton" layoutX="74.0" layoutY="282.0" mnemonicParsing="false" onAction="#setLoginButton" text="Login" />
       <Button layoutX="231.0" layoutY="282.0" mnemonicParsing="false" text="Signup" />
       <Button layoutX="155.0" layoutY="282.0" mnemonicParsing="false" text="Cancel" />
 
