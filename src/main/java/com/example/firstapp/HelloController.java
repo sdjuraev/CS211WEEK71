@@ -71,6 +71,7 @@ public class HelloController {
             }
             @FXML
     public void setSignUp() throws IOException {
+        //Comment
                 Stage stage=new Stage();
                 FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("signup-view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load());
