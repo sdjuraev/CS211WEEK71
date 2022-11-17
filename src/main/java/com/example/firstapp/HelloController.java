@@ -25,29 +25,32 @@ public class HelloController {
     }
     @FXML
     protected void setLoginButton() throws IOException {
-        File file=new File("password.txt");
-        Scanner scanner=new Scanner(file);
-        //https://github.com/sdjuraev/CS211WEEK71.git
-        if (counter<=0){
-            System.out.println("You attempted many times");
-            LoginButton.setDisable(true);
-        }
-        counter--;
-        while (scanner.hasNext()){
-            String temp[]=scanner.nextLine().split(" ");
-            if (loginText.getText().equals((temp[0]))&&passwordText.getText().equals(temp[1]))
-            {
-                System.out.println("Login successful!");
-                counter=5;
-                status=true;
+        if (loginText.getText().isEmpty()||passwordText.getText().isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Login password can't be empty!");
+            alert.show();
+        } else {
+            File file = new File("password.txt");
+            Scanner scanner = new Scanner(file);
+            //https://github.com/sdjuraev/CS211WEEK71.git
+            if (counter <= 0) {
+                System.out.println("You attempted many times");
+                LoginButton.setDisable(true);
             }
-            else {
+            counter--;
+            while (scanner.hasNext()) {
+                String temp[] = scanner.nextLine().split(" ");
+                if (loginText.getText().equals((temp[0])) && passwordText.getText().equals(temp[1])) {
+                    System.out.println("Login successful!");
+                    counter = 5;
+                    status = true;
+                } else {
 
+                }
             }
-        }
-        if (!status){
-        Alert alert=new Alert(Alert.AlertType.WARNING,"You have "+counter+" attempts");
-        alert.show();
+            if (!status) {
+                Alert alert = new Alert(Alert.AlertType.WARNING, "You have " + counter + " attempts");
+                alert.show();
+            }
         }
     }
 
